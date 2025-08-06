@@ -1,12 +1,19 @@
+
 import CTAButton from "@/components/atoms/CTAButton";
-import { ArrowRight, Play, Signal, Shield, Zap } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { ArrowRight, Play, Signal, Shield, Zap, Wifi, Smartphone, Radio } from "lucide-react";
 
 const HeroSection = () => {
   const stats = [
     { icon: Signal, value: "15+", label: "Años de experiencia" },
     { icon: Shield, value: "500+", label: "Proyectos exitosos" },
     { icon: Zap, value: "99%", label: "Satisfacción del cliente" }
+  ];
+
+  const signalMetrics = [
+    { icon: Wifi, label: "WiFi", strength: 85, color: "text-primary" },
+    { icon: Smartphone, label: "4G/5G", strength: 92, color: "text-success" },
+    { icon: Radio, label: "Radio", strength: 78, color: "text-accent" },
+    { icon: Signal, label: "General", strength: 88, color: "text-primary" }
   ];
 
   return (
@@ -91,32 +98,59 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right column - Visual element */}
+          {/* Right column - Signal Monitor Dashboard */}
           <div className="relative lg:block hidden">
             <div className="relative">
-              {/* Main device illustration */}
-              <div className="relative z-10 bg-gradient-surface p-8 rounded-3xl border border-border/20 shadow-xl animate-float">
-                <div className="space-y-4">
-                  <div className="w-full h-4 bg-primary/20 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-primary rounded-full w-4/5 animate-pulse"></div>
+              {/* Panel de Monitoreo de Señal */}
+              <div className="relative z-10 bg-card p-6 rounded-3xl border border-border/20 shadow-lg animate-float">
+                <div className="space-y-6">
+                  {/* Header del panel */}
+                  <div className="text-center border-b border-border/10 pb-4">
+                    <h3 className="text-lg font-semibold text-foreground">Monitor de Señal</h3>
+                    <p className="text-sm text-muted-foreground">Estado en tiempo real</p>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    {[1,2,3,4].map((i) => (
-                      <div key={i} className="aspect-square bg-surface-variant rounded-xl flex items-center justify-center">
-                        <Signal className="w-8 h-8 text-primary" />
+
+                  {/* Métricas de señal */}
+                  <div className="space-y-4">
+                    {signalMetrics.map((metric, index) => (
+                      <div key={index} className="flex items-center gap-4">
+                        <div className="w-10 h-10 bg-surface rounded-lg flex items-center justify-center">
+                          <metric.icon className={`w-5 h-5 ${metric.color}`} />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex justify-between items-center mb-1">
+                            <span className="text-sm font-medium text-foreground">{metric.label}</span>
+                            <span className="text-xs text-muted-foreground">{metric.strength}%</span>
+                          </div>
+                          <div className="w-full bg-muted rounded-full h-2">
+                            <div 
+                              className="bg-primary rounded-full h-2 transition-all duration-1000" 
+                              style={{ width: `${metric.strength}%` }}
+                            />
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
-                  <div className="text-center">
-                    <div className="text-sm text-muted-foreground">Cobertura Optimizada</div>
-                    <div className="text-2xl font-bold text-gradient">100%</div>
+
+                  {/* Status general */}
+                  <div className="bg-success/10 border border-success/20 rounded-xl p-4 text-center">
+                    <div className="text-success text-2xl font-bold">ÓPTIMO</div>
+                    <div className="text-xs text-muted-foreground mt-1">
+                      Cobertura mejorada en 300%
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-accent rounded-2xl shadow-glow opacity-80 animate-pulse-primary" />
-              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-gradient-primary rounded-xl shadow-glow opacity-60" style={{ animationDelay: "1s" }} />
+              {/* Indicadores flotantes */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary/10 backdrop-blur-sm rounded-2xl border border-primary/20 flex items-center justify-center animate-pulse-primary">
+                <Signal className="w-8 h-8 text-primary" />
+              </div>
+              
+              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-success/10 backdrop-blur-sm rounded-xl border border-success/20 flex items-center justify-center" style={{ animationDelay: "1s" }}>
+                <Zap className="w-6 h-6 text-success" />
+              </div>
             </div>
           </div>
         </div>
