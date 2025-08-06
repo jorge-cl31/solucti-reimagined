@@ -24,10 +24,10 @@ const CTAButton = ({
   href
 }: CTAButtonProps) => {
   const variantClasses = {
-    primary: "bg-gradient-primary hover:opacity-90 text-primary-foreground border-0 shadow-glow",
-    secondary: "bg-surface-variant hover:bg-surface text-secondary-foreground",
-    accent: "bg-gradient-accent hover:opacity-90 text-accent-foreground border-0",
-    outline: "border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+    primary: "bg-primary hover:bg-primary/90 text-primary-foreground border-0",
+    secondary: "bg-secondary hover:bg-secondary/90 text-secondary-foreground border-0",
+    accent: "bg-accent hover:bg-accent/90 text-accent-foreground border-0",
+    outline: "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
   };
 
   const sizeClasses = {

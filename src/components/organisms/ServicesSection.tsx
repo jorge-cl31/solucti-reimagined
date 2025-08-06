@@ -91,7 +91,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="servicios" className="py-20 bg-surface/30">
+    <section id="servicios" className="py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up">
@@ -133,13 +133,13 @@ const ServicesSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="#contacto"
-                className="inline-flex items-center justify-center gap-2 h-11 px-6 bg-gradient-primary hover:opacity-90 text-primary-foreground rounded-xl font-medium transition-smooth hover-lift"
+                className="inline-flex items-center justify-center gap-2 h-11 px-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-medium transition-smooth hover-lift"
               >
                 Consulta Personalizada
               </a>
               <a 
                 href="tel:+56988888929"
-                className="inline-flex items-center justify-center gap-2 h-11 px-6 bg-surface hover:bg-surface-variant text-foreground rounded-xl font-medium transition-smooth hover-lift border border-border/20"
+                className="inline-flex items-center justify-center gap-2 h-11 px-6 bg-background hover:bg-surface-variant text-foreground rounded-xl font-medium transition-smooth hover-lift border-2 border-border"
               >
                 Llamar Ahora
               </a>
