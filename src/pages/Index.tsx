@@ -1,26 +1,28 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/organisms/Header";
 import HeroSection from "@/components/organisms/HeroSection";
-import ServicesSection from "@/components/organisms/ServicesSection";
-import ProductsSection from "@/components/organisms/ProductsSection";
-import BenefitsSection from "@/components/organisms/BenefitsSection";
-import ClientsSection from "@/components/organisms/ClientsSection";
-import ContactSection from "@/components/organisms/ContactSection";
 import Footer from "@/components/organisms/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <HeroSection />
-        <ServicesSection />
-        <ProductsSection />
-        <BenefitsSection />
-        <ClientsSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Helmet>
+        <title>Solucti - Soluciones de Conectividad Empresarial</title>
+        <meta name="description" content="Especialistas en soluciones de conectividad para empresas. Mejoramos tu conectividad con tecnología de vanguardia y soporte especializado." />
+        <meta name="keywords" content="conectividad, soluciones empresariales, internet, telecomunicaciones, soporte técnico" />
+        <meta property="og:title" content="Solucti - Soluciones de Conectividad Empresarial" />
+        <meta property="og:description" content="Especialistas en soluciones de conectividad para empresas" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="/" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          <HeroSection />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 
