@@ -133,7 +133,7 @@ const ContactForm = ({ className }: ContactFormProps) => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full h-14 px-8 text-lg bg-gradient-primary hover:opacity-90 text-primary-foreground border-0 shadow-glow rounded-xl font-display font-semibold transition-smooth hover-lift focus-ring flex items-center justify-center gap-2"
+          className="w-full h-14 px-8 text-lg bg-gradient-primary hover:opacity-90 text-primary-foreground border-0 shadow-glow rounded-full font-display font-semibold transition-smooth hover-lift focus-ring flex items-center justify-center gap-2"
         >
           <Send className="w-5 h-5" />
           <span>{isSubmitting ? "Enviando..." : "Enviar Mensaje"}</span>

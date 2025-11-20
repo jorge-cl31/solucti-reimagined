@@ -16,7 +16,7 @@ const Footer = () => {
   const quickLinks = [
     { name: "Inicio", href: "#inicio" },
     { name: "Servicios", href: "#servicios" },
-    { name: "Beneficios", href: "#beneficios" },
+    { name: "Servicios", href: "#beneficios" },
     { name: "Clientes", href: "#clientes" },
     { name: "Contacto", href: "#contacto" }
   ];
@@ -83,18 +83,7 @@ const Footer = () => {
             </div>
 
             {/* Social media */}
-            <div className="flex gap-4 pt-4">
-              {socialMedia.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="w-10 h-10 bg-surface-variant hover:bg-primary rounded-lg flex items-center justify-center transition-smooth hover-lift group"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground transition-smooth" />
-                </a>
-              ))}
-            </div>
+            
           </div>
 
           {/* Navigation links */}
@@ -154,30 +143,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
-        {/* Newsletter signup */}
-        <div className="mt-12 pt-8 border-t border-border/20">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-xl font-display font-semibold text-foreground mb-2">
-                Mantente Conectado
-              </h3>
-              <p className="text-muted-foreground">
-                Suscríbete para recibir las últimas novedades en tecnología de conectividad
-              </p>
-            </div>
-            <div className="flex gap-4">
-              <input
-                type="email"
-                placeholder="tu@email.com"
-                className="flex-1 h-11 px-4 bg-surface border border-border/40 rounded-xl text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none transition-smooth"
-              />
-              <button className="h-11 px-6 bg-gradient-primary hover:opacity-90 text-primary-foreground rounded-xl font-medium transition-smooth hover-lift">
-                Suscribirse
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Bottom bar */}
@@ -185,18 +150,8 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-muted-foreground">
-              <span>© 2024 Solucti. Todos los derechos reservados.</span>
-              <div className="flex gap-4">
-                <a href="#" className="hover:text-foreground transition-smooth">
-                  Política de Privacidad
-                </a>
-                <a href="#" className="hover:text-foreground transition-smooth">
-                  Términos de Servicio
-                </a>
-                <a href="#" className="hover:text-foreground transition-smooth">
-                  Cookies
-                </a>
-              </div>
+              <span>©Solucti. Todos los derechos reservados.</span>
+              
             </div>
             
             {/* Scroll to top button */}

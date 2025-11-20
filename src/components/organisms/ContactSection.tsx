@@ -4,9 +4,7 @@ import {
   MapPin, 
   Phone, 
   Mail, 
-  Clock, 
-  MessageCircle,
-  Send
+  Clock
 } from "lucide-react";
 
 const ContactSection = () => {
@@ -37,25 +35,6 @@ const ContactSection = () => {
     }
   ];
 
-  const quickActions = [
-    {
-      title: "Consulta Técnica",
-      description: "Habla con nuestros expertos",
-      icon: MessageCircle,
-      action: "Chatear ahora",
-      link: "#",
-      variant: "primary" as const
-    },
-    {
-      title: "Solicitar Cotización",
-      description: "Obtén un presupuesto detallado",
-      icon: Send,
-      action: "Cotizar proyecto",
-      link: "#contacto",
-      variant: "accent" as const
-    }
-  ];
-
   return (
     <section id="contacto" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,9 +60,8 @@ const ContactSection = () => {
             <ContactForm />
           </div>
 
-          {/* Contact Info & Quick Actions */}
+          {/* Contact Info */}
           <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            {/* Contact Information */}
             <Card className="p-6 bg-card-elevated border-border/20">
               <h3 className="text-xl font-display font-semibold text-foreground mb-6">
                 Información de Contacto
@@ -110,70 +88,12 @@ const ContactSection = () => {
                 ))}
               </div>
             </Card>
-
-            {/* Quick Actions */}
-            <div className="space-y-4">
-              {quickActions.map((action, index) => (
-                <Card 
-                  key={index}
-                  className="p-6 bg-card-elevated border-border/20 hover:border-primary/20 transition-smooth hover-lift group"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                      action.variant === 'primary' 
-                        ? 'bg-gradient-primary text-primary-foreground' 
-                        : 'bg-gradient-accent text-accent-foreground'
-                    }`}>
-                      <action.icon className="w-6 h-6" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-display font-semibold text-foreground mb-1">
-                        {action.title}
-                      </h4>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        {action.description}
-                      </p>
-                      <a 
-                        href={action.link}
-                        className={`inline-flex items-center gap-2 text-sm font-medium transition-smooth ${
-                          action.variant === 'primary' 
-                            ? 'text-primary hover:text-primary/80' 
-                            : 'text-accent hover:text-accent/80'
-                        }`}
-                      >
-                        {action.action}
-                        <action.icon className="w-4 h-4" />
-                      </a>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-
-            {/* Emergency Contact */}
-            <Card className="p-6 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
-              <div className="text-center">
-                <h4 className="font-display font-semibold text-foreground mb-2">
-                  ¿Necesitas Soporte Urgente?
-                </h4>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Para emergencias técnicas, contáctanos directamente
-                </p>
-                <a 
-                  href="tel:+56981888929"
-                  className="inline-flex items-center justify-center gap-2 w-full h-11 bg-gradient-primary hover:opacity-90 text-primary-foreground rounded-xl font-medium transition-smooth hover-lift"
-                >
-                  <Phone className="w-4 h-4" />
-                  Llamar Ahora
-                </a>
-              </div>
-            </Card>
           </div>
         </div>
 
-        {/* Map placeholder */}
+        {/* Servicio en Todo Chile - centrado y extendido */}
         <div className="mt-16 animate-fade-in">
-          <Card className="p-8 bg-card-elevated border-border/20 text-center">
+          <Card className="p-8 bg-card-elevated border-border/20 text-center max-w-4xl mx-auto">
             <div className="max-w-2xl mx-auto">
               <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-display font-semibold text-foreground mb-4">

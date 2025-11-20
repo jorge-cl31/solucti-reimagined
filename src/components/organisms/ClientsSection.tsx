@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Building2, Home, Truck, Star, Quote } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 const ClientsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -54,12 +55,12 @@ const ClientsSection = () => {
   ];
 
   const clients = [
-    { name: "Empresa A", logo: "🏢" },
-    { name: "Empresa B", logo: "🏭" },
-    { name: "Empresa C", logo: "🏨" },
-    { name: "Empresa D", logo: "🏪" },
-    { name: "Empresa E", logo: "🏥" },
-    { name: "Empresa F", logo: "🏢" }
+    { logoImg: "/clientes/Cencosud_logo.png" },
+    { logoImg: "/clientes/anglo.png" },
+    { logoImg: "/clientes/kaufmann.png" },
+    { logoImg: "/clientes/coopeuch.png" },
+    { logoImg: "/clientes/echeverria.png" },
+    { logoImg: "/clientes/australis.png" }
   ];
 
   useEffect(() => {
@@ -200,7 +201,18 @@ const ClientsSection = () => {
                 className="flex items-center justify-center p-6 bg-card-elevated rounded-2xl border border-border/20 hover:border-primary/20 transition-smooth hover-lift"
               >
                 <div className="text-center">
-                  <div className="text-3xl mb-2">{client.logo}</div>
+                  <div className="text-3xl mb-2">
+                    {client.logoImg ? (
+                      <img
+                        src={client.logoImg}
+                        alt={client.name}
+                        className="h-20 w-auto mx-auto" // Aumenta el alto a 80px, ancho proporcional
+                        style={{ maxWidth: "140px" }}   // Limita el ancho máximo para mantener proporción
+                      />
+                    ) : (
+                      client.logo
+                    )}
+                  </div>
                   <div className="text-sm text-muted-foreground">{client.name}</div>
                 </div>
               </div>
@@ -217,12 +229,14 @@ const ClientsSection = () => {
             <p className="text-muted-foreground mb-6">
               Únete a cientos de clientes satisfechos que han mejorado su conectividad
             </p>
-            <a 
-              href="#contacto"
-              className="inline-flex items-center justify-center gap-2 h-11 px-6 bg-gradient-primary hover:opacity-90 text-primary-foreground rounded-xl font-medium transition-smooth hover-lift"
-            >
-              Solicitar Cotización
-            </a>
+            <div className="flex justify-center">
+              <a
+                href="/contacto"
+                className="rounded-full bg-primary text-primary-foreground px-6 py-3 font-semibold transition-colors hover:bg-primary/90"
+              >
+                Solicitar Cotización
+              </a>
+            </div>
           </div>
         </div>
       </div>

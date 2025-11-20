@@ -143,7 +143,7 @@ const BenefitsSection = () => {
         </div>
 
         {/* Bottom testimonial */}
-        <div className="mt-20 text-center animate-fade-in">
+        {/* <div className="mt-20 text-center animate-fade-in">
           <div className="bg-gradient-surface p-8 lg:p-12 rounded-3xl border border-border/20 max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="flex gap-1">
@@ -166,7 +166,7 @@ const BenefitsSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

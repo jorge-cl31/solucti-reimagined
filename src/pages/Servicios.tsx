@@ -1,19 +1,19 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/organisms/Header";
-import ServicesSection from "@/components/organisms/ServicesSection";
+import BenefitsSection from "@/components/organisms/BenefitsSection";
 import Footer from "@/components/organisms/Footer";
 
-const Servicios = () => {
+const Beneficios = () => {
   return (
     <>
       <Helmet>
-        <title>Servicios - Solucti | Soluciones de Conectividad</title>
-        <meta name="description" content="Ofrecemos servicios especializados en conectividad: instalación, mantenimiento, consultoría técnica y soporte 24/7." />
+        <title>Beneficios - Solucti | Ventajas de Nuestras Soluciones</title>
+        <meta name="description" content="Conoce los beneficios de elegir Solucti: mejora en conectividad, reducción de costos, soporte especializado y más." />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-16">
-          <ServicesSection />
+          <BenefitsSection />
         </main>
         <Footer />
       </div>
@@ -21,4 +21,4 @@ const Servicios = () => {
   );
 };
 
-export default Servicios;
+export default Beneficios;

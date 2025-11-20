@@ -1,4 +1,3 @@
-
 import CTAButton from "@/components/atoms/CTAButton";
 import { ArrowRight, Play, Signal, Shield, Zap, Wifi, Smartphone, Radio } from "lucide-react";
 
@@ -64,18 +63,12 @@ const HeroSection = () => {
                 variant="primary" 
                 size="lg" 
                 icon={ArrowRight}
-                href="#servicios"
+                href="/servicios"
+                className="rounded-full" // <-- Añade esta clase para esquinas completamente redondeadas
               >
                 Ver Soluciones
               </CTAButton>
-              <CTAButton 
-                variant="outline" 
-                size="lg" 
-                icon={Play}
-                href="#contacto"
-              >
-                Solicitar Demo
-              </CTAButton>
+              
             </div>
 
             {/* Stats */}
@@ -106,8 +99,8 @@ const HeroSection = () => {
                 <div className="space-y-6">
                   {/* Header del panel */}
                   <div className="text-center border-b border-border/10 pb-4">
-                    <h3 className="text-lg font-semibold text-foreground">Monitor de Señal</h3>
-                    <p className="text-sm text-muted-foreground">Estado en tiempo real</p>
+                    <h3 className="text-lg font-semibold text-foreground">Optimizamos tu Cobertura</h3>
+                    <p className="text-sm text-muted-foreground">Amplificación de señal</p>
                   </div>
 
                   {/* Métricas de señal */}

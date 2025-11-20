@@ -11,9 +11,8 @@ const Header = () => {
 
   const navigation = [
     { name: "Inicio", href: "/" },
-    { name: "Servicios", href: "/servicios" },
+    { name: "Servicios", href: "/Servicios" },
     { name: "Productos", href: "/productos" },
-    { name: "Beneficios", href: "/beneficios" },
     { name: "Clientes", href: "/clientes" },
     { name: "Contacto", href: "/contacto" }
   ];
@@ -44,15 +43,21 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <a 
-              href="tel:+56988888929"
+              href="tel:+56981888929"
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-smooth"
             >
               <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">+56 9 8888 8929</span>
+              <span className="text-sm font-medium">+56 9 8188 8929</span>
             </a>
-            <CTAButton variant="primary" size="sm">
-              Cotizar
-            </CTAButton>
+            <a
+              href="https://wa.me/56981888929"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CTAButton variant="primary" size="sm" className="rounded-full">
+                Cotizar
+              </CTAButton>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -93,7 +98,7 @@ const Header = () => {
                 className="flex items-center gap-2 px-3 py-2 text-muted-foreground hover:text-foreground rounded-lg"
               >
                 <Phone className="w-4 h-4" />
-                <span>+56 9 8888 8929</span>
+                <span>+56 9 8188 8929</span>
               </a>
               <CTAButton variant="primary" size="md" className="w-full">
                 Cotizar Proyecto

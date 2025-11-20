@@ -27,11 +27,9 @@ const Logo = ({ className, variant = "default" }: LogoProps) => {
             "font-display font-bold text-xl tracking-tight",
             variant === "light" ? "text-foreground" : "text-gradient"
           )}>
-            solucti
+            SolucTI
           </span>
-          <span className="text-xs text-muted-foreground font-medium -mt-1">
-            CONNECT TECH
-          </span>
+          
         </div>
       )}
     </div>
