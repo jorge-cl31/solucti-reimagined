@@ -100,7 +100,7 @@ const HeroSection = () => {
                   {/* Header del panel */}
                   <div className="text-center border-b border-border/10 pb-4">
                     <h3 className="text-lg font-semibold text-foreground">Optimizamos tu Cobertura</h3>
-                    <p className="text-sm text-muted-foreground">Amplificación de señal</p>
+                    <p className="text-sm text-muted-foreground">Cotiza nuestros servicios</p>
                   </div>
 
                   {/* Métricas de señal */}
@@ -128,9 +128,9 @@ const HeroSection = () => {
 
                   {/* Status general */}
                   <div className="bg-success/10 border border-success/20 rounded-xl p-4 text-center">
-                    <div className="text-success text-2xl font-bold">ÓPTIMO</div>
+                    <div className="text-success text-2xl font-bold">Contáctanos</div>
                     <div className="text-xs text-muted-foreground mt-1">
-                      Cobertura mejorada en 300%
+                      Mejoramos tu cobertura 300%
                     </div>
                   </div>
                 </div>
