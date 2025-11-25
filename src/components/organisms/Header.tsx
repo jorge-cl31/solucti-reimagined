@@ -10,11 +10,11 @@ const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: "Inicio", href: "/" },
-    { name: "Servicios", href: "/Servicios" },
-    { name: "Productos", href: "/productos" },
-    { name: "Clientes", href: "/clientes" },
-    { name: "Contacto", href: "/contacto" }
+    { name: "Inicio", href: "#/" },
+    { name: "Servicios", href: "#/servicios" },
+    { name: "Productos", href: "#/productos" },
+    { name: "Clientes", href: "#/clientes" },
+    { name: "Contacto", href: "#/contacto" }
   ];
 
   return (

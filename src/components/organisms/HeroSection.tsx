@@ -63,8 +63,8 @@ const HeroSection = () => {
                 variant="primary" 
                 size="lg" 
                 icon={ArrowRight}
-                href="/servicios"
-                className="rounded-full" // <-- Añade esta clase para esquinas completamente redondeadas
+                href="#/servicios" // Cambia /servicios por #/servicios para HashRouter
+                className="rounded-full"
               >
                 Ver Soluciones
               </CTAButton>

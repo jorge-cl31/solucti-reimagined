@@ -55,11 +55,11 @@ const ClientsSection = () => {
   ];
 
   const clients = [
-    { logoImg: "/clientes/Cencosud_logo.png" },
-    { logoImg: "/clientes/anglo.png" },
-    { logoImg: "/clientes/kaufmann.png" },
-    { logoImg: "/clientes/coopeuch.png" },
-    { logoImg: "/clientes/echeverria.png" },
+    { logoImg: "./clientes/Cencosud_logo.png" },
+    { logoImg: "./clientes/anglo.png" },
+    { logoImg: "./clientes/kaufmann.png" },
+    { logoImg: "./clientes/coopeuch.png" },
+    { logoImg: "./clientes/echeverria.png" },
     { logoImg: "/clientes/australis.png" }
   ];
 

@@ -11,7 +11,7 @@ const categories = [
 				id: 1,
 				name: "WilsonPro 1000",
 				description: "Amplificador profesional para edificios grandes.",
-				image: "/productos/wilsonpro1000.jpeg",
+				image: "./productos/wilsonpro1000.jpeg",
 				features: ["Cobertura 1500m²", "Control automático", "Certificado SUBTEL"],
 				price: "Desde $1.200.000"
 			},
@@ -19,7 +19,7 @@ const categories = [
 				id: 2,
 				name: "WilsonPro 4000",
 				description: "Sistema avanzado para oficinas y empresas.",
-				image: "/productos/wilsonpro2000.jpeg",
+				image: "./productos/wilsonpro2000.jpeg",
 				features: ["Cobertura 3000m²", "Monitoreo remoto", "Alta ganancia"],
 				price: "Desde $2.800.000"
 			}
@@ -33,7 +33,7 @@ const categories = [
 				id: 3,
 				name: "Antena Yagi Wilson",
 				description: "Antena direccional de alta ganancia para zonas rurales.",
-				image: "/productos/reemplazar.png",
+				image: "./productos/reemplazar.png",
 				features: ["18dBi ganancia", "Montaje universal", "Resistente a clima"],
 				price: "Desde $180.000"
 			},
@@ -41,7 +41,7 @@ const categories = [
 				id: 4,
 				name: "Kit Splitter Wilson",
 				description: "Accesorio para dividir señal en múltiples zonas.",
-				image: "/productos/reemplazar.png",
+				image: "./productos/reemplazar.png",
 				features: ["Fácil instalación", "Baja pérdida", "Compatibilidad universal"],
 				price: "Desde $60.000"
 			}
@@ -55,7 +55,7 @@ const categories = [
 				id: 5,
 				name: "weBoost Home MultiRoom",
 				description: "Amplificador doméstico para varias habitaciones.",
-				image: "/productos/reemplazar.png",
+				image: "./productos/reemplazar.png",
 				features: ["Cobertura 300m²", "Fácil instalación", "Compatibilidad total"],
 				price: "Desde $350.000"
 			},
@@ -63,7 +63,7 @@ const categories = [
 				id: 6,
 				name: "weBoost Drive Reach",
 				description: "Amplificador móvil para vehículos.",
-				image: "/productos/reemplazar.png",
+				image: "./productos/reemplazar.png",
 				features: ["Uso en autos y camiones", "Potencia máxima", "Plug & Play"],
 				price: "Desde $290.000"
 			}
@@ -77,7 +77,7 @@ const categories = [
 				id: 7,
 				name: "STI 4 Bandas",
 				description: "Sistema de amplificación para 4 bandas simultáneas.",
-				image: "/productos/reemplazar.png",
+				image: "./productos/reemplazar.png",
 				features: ["Cobertura 1000m²", "Multi-operador", "Control digital"],
 				price: "Desde $950.000"
 			},
@@ -85,7 +85,7 @@ const categories = [
 				id: 8,
 				name: "STI 5 Bandas",
 				description: "Amplificador premium para máxima cobertura y velocidad.",
-				image: "/productos/reemplazar.png",
+				image: "./productos/reemplazar.png",
 				features: ["Cobertura 2000m²", "5 bandas", "Gestión avanzada"],
 				price: "Desde $1.500.000"
 			}
