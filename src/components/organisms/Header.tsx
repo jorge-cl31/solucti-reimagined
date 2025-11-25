@@ -10,11 +10,11 @@ const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: "Inicio", href: "#/" },
-    { name: "Servicios", href: "#/servicios" },
-    { name: "Productos", href: "#/productos" },
-    { name: "Clientes", href: "#/clientes" },
-    { name: "Contacto", href: "#/contacto" }
+    { name: "Inicio", href: "/" },
+    { name: "Servicios", href: "/servicios" },
+    { name: "Productos", href: "/productos" },
+    { name: "Clientes", href: "/clientes" },
+    { name: "Contacto", href: "/contacto" }
   ];
 
   return (
@@ -94,15 +94,21 @@ const Header = () => {
             ))}
             <div className="pt-4 space-y-3">
               <a 
-                href="tel:+56988888929"
+                href="tel:+56981888929"
                 className="flex items-center gap-2 px-3 py-2 text-muted-foreground hover:text-foreground rounded-lg"
               >
                 <Phone className="w-4 h-4" />
                 <span>+56 9 8188 8929</span>
               </a>
-              <CTAButton variant="primary" size="md" className="w-full">
-                Cotizar Proyecto
-              </CTAButton>
+              <a
+                href="https://wa.me/56981888929"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <CTAButton variant="primary" size="md" className="w-full rounded-full">
+                  Cotizar Proyecto
+                </CTAButton>
+              </a>
             </div>
           </nav>
         </div>
